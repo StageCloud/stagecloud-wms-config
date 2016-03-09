@@ -32,8 +32,7 @@
 			<StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>
 			<KeyDir>${com.wowza.wms.context.VHostConfigHome}/keys</KeyDir>
 			<!-- LiveStreamPacketizers (separate with commas): cupertinostreamingpacketizer, smoothstreamingpacketizer, sanjosestreamingpacketizer, mpegdashstreamingpacketizer, cupertinostreamingrepeater, smoothstreamingrepeater, sanjosestreamingrepeater, mpegdashstreamingrepeater, dvrstreamingpacketizer, dvrstreamingrepeater -->
-			<LiveStreamPacketizers></LiveStreamPacketizers>
-			<!-- Properties defined here will override any properties defined in conf/Streams.xml for any streams types loaded by this application -->
+            <LiveStreamPacketizers>sanjosestreamingpacketizer, mpegdashstreamingpacketizer, cupertinostreamingrepeater, smoothstreamingrepeater</LiveStreamPacketizers>			<!-- Properties defined here will override any properties defined in conf/Streams.xml for any streams types loaded by this application -->
 			<Properties>
 			</Properties>
 		</Streams>
@@ -175,6 +174,10 @@
 		<HTTPStreamer>
 			<!-- Properties defined here will override any properties defined in conf/HTTPStreamers.xml for any HTTPStreamer loaded by this applications -->
 			<Properties>
+				<Property>
+	          <Name>cupertinoUserHTTPHeaders</Name>
+	          <Value>Access-Control-Allow-Origin: *</Value>
+	      </Property>
 			</Properties>
 		</HTTPStreamer>
 		<Manager>

@@ -28,7 +28,7 @@
 			
 		-->
 		<Streams>
-			<StreamType>live</StreamType>
+			<StreamType>live-lowlatency</StreamType>
 			<StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>
 			<KeyDir>${com.wowza.wms.context.VHostConfigHome}/keys</KeyDir>
 			<!-- LiveStreamPacketizers (separate with commas): cupertinostreamingpacketizer, smoothstreamingpacketizer, sanjosestreamingpacketizer, mpegdashstreamingpacketizer, cupertinostreamingrepeater, smoothstreamingrepeater, sanjosestreamingrepeater, mpegdashstreamingrepeater, dvrstreamingpacketizer, dvrstreamingrepeater -->
@@ -39,7 +39,7 @@
 		</Streams>
 		<Transcoder>
 			<!-- To turn on transcoder set to: transcoder -->
-			<LiveStreamTranscoder></LiveStreamTranscoder>
+			<LiveStreamTranscoder>transcoder</LiveStreamTranscoder>
 			<!-- [templatename].xml or ${SourceStreamName}.xml -->
 			<Templates>${SourceStreamName}.xml,transrate.xml</Templates>
 			<ProfileDir>${com.wowza.wms.context.VHostConfigHome}/transcoder/profiles</ProfileDir>
@@ -96,7 +96,7 @@
 		<RTP>
 			<!-- RTP/Authentication/[type]Methods defined in Authentication.xml. Default setup includes; none, basic, digest -->
 			<Authentication>
-				<PublishMethod>digest</PublishMethod>
+				<PublishMethod>none</PublishMethod>
 				<PlayMethod>none</PlayMethod>
 			</Authentication>
 			<!-- RTP/AVSyncMethod. Valid values are: senderreport, systemclock, rtptimecode -->
@@ -195,19 +195,9 @@
 				<Description>FLVPlayback</Description>
 				<Class>com.wowza.wms.module.ModuleFLVPlayback</Class>
 			</Module>
-			<Module>
-				<Name>ModuleCoreSecurity</Name>
-				<Description>Core Security Module for Applications</Description>
-				<Class>com.wowza.wms.security.ModuleCoreSecurity</Class>
-			</Module>
 		</Modules>
 		<!-- Properties defined here will be added to the IApplication.getProperties() and IApplicationInstance.getProperties() collections -->
 		<Properties>
-			<Property>
-				<Name>securityPublishRequirePassword</Name>
-				<Value>true</Value>
-				<Type>Boolean</Type>
-			</Property>
 		</Properties>
 	</Application>
 </Root>

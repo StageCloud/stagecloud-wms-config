@@ -324,7 +324,7 @@
 		
 		<Manager>
 			<TestPlayer>
-				<IpAddress>${com.wowza.google.gce.GOOGLEGCE_METADATA_EXTERNAL_IP}</IpAddress> <!--changed for default Google cloud install. <IpAddress>${com.wowza.wms.HostPort.IpAddress}</IpAddress>-->
+				<IpAddress>${com.wowza.wms.HostPort.IpAddress}</IpAddress>
 				<Port>${com.wowza.wms.HostPort.FirstStreamingPort}</Port>
 				<SSLEnable>${com.wowza.wms.HostPort.SSLEnable}</SSLEnable>
 			</TestPlayer>

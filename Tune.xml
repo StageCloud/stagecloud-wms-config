@@ -9,7 +9,7 @@
 
 			or specify heap size directly (ex: <HeapSize>8000M</HeapSize>)
 		-->
-		<HeapSize>${com.wowza.wms.TuningHeapSizeProduction}</HeapSize>
+		<HeapSize>${com.wowza.wms.TuningHeapSizeDevelopment}</HeapSize>
 
 		<!--
 			GarbageCollector

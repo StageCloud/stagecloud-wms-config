@@ -199,6 +199,11 @@
 				<Description>FLVPlayback</Description>
 				<Class>com.wowza.wms.module.ModuleFLVPlayback</Class>
 			</Module>
+			<Module>
+				<Name>ModulePublishEvents</Name>
+				<Description>ModulePublishEvents</Description>
+				<Class>com.prioritylane.wowza.ModulePublishEvents</Class>
+			</Module>
 		</Modules>
 		<!-- Properties defined here will be added to the IApplication.getProperties() and IApplicationInstance.getProperties() collections -->
 		<Properties>

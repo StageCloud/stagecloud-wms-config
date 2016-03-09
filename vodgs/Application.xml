@@ -35,6 +35,11 @@
 			<LiveStreamPacketizers></LiveStreamPacketizers>
 			<!-- Properties defined here will override any properties defined in conf/Streams.xml for any streams types loaded by this application -->
 			<Properties>
+				<Property>
+					<Name>seekTarget</Name>
+					<Value>keyframe</Value>
+					<Type>String</Type>
+				</Property>
 			</Properties>
 		</Streams>
 		<Transcoder>
